@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creator Portfolio | Freelance Social Media Content</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="container nav">
+        <div class="brand">CreatorStudio</div>
+        <a class="btn btn-secondary" href="#contact">Hire Me</a>
+      </nav>
+      <div class="container hero-content">
+        <p class="tag">Freelance Social Media Content Creator</p>
+        <h1>Scroll-stopping content for brands that want to grow.</h1>
+        <p>
+          Showcase your work, organize campaign examples, and let potential clients
+          quickly see your style.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#upload">Upload New Content</a>
+          <a class="btn btn-secondary" href="#portfolio">View Portfolio</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="services" class="container section">
+        <h2>What I offer</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Short-Form Video</h3>
+            <p>Reels, TikToks, and Shorts optimized for watch time and shares.</p>
+          </article>
+          <article class="card">
+            <h3>UGC Style Content</h3>
+            <p>Authentic product storytelling for paid ads and organic campaigns.</p>
+          </article>
+          <article class="card">
+            <h3>Content Strategy</h3>
+            <p>Concept direction, hook writing, and posting cadence guidance.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="upload" class="container section upload">
+        <h2>Upload portfolio content</h2>
+        <p>Add examples directly in your browser and display them instantly below.</p>
+
+        <form id="uploadForm" class="upload-form">
+          <label>
+            Project title
+            <input type="text" id="title" placeholder="e.g. Fitness Brand Reel" required />
+          </label>
+          <label>
+            Description
+            <textarea id="description" rows="3" placeholder="What was the goal and result?" required></textarea>
+          </label>
+          <label>
+            Category
+            <select id="category" required>
+              <option value="">Select category</option>
+              <option>Reel</option>
+              <option>TikTok</option>
+              <option>UGC Ad</option>
+              <option>Static Post</option>
+            </select>
+          </label>
+          <label>
+            Upload image or thumbnail
+            <input type="file" id="mediaFile" accept="image/*" required />
+          </label>
+          <button type="submit" class="btn">Add to Portfolio</button>
+        </form>
+      </section>
+
+      <section id="portfolio" class="container section">
+        <div class="portfolio-heading">
+          <h2>Featured content</h2>
+          <button id="clearAll" class="btn btn-secondary">Clear All</button>
+        </div>
+        <div id="portfolioGrid" class="portfolio-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="container footer-content">
+        <h2>Let’s create your next campaign</h2>
+        <p>Email: you@example.com · Instagram/TikTok: @yourhandle</p>
+      </div>
+    </footer>
+
+    <template id="portfolioCardTemplate">
+      <article class="portfolio-card">
+        <img alt="" class="portfolio-image" />
+        <div class="portfolio-body">
+          <span class="badge"></span>
+          <h3></h3>
+          <p></p>
+          <button class="remove-item" type="button">Remove</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
